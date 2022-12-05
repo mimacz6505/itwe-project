@@ -6,6 +6,11 @@ body
 }
 h1{
     text-align: center;
+    text-decoration: none;
+    font-size: 30px;
+    font-family: bignoodletitling;
+    color: #262626;
+    letter-spacing: 4px;
 }
 #container{
     width: 1200px;
@@ -24,8 +29,15 @@ div4, div5, div6{
     float: left;
     margin: 23px;
     padding: 10px;
-    background-color: #cec1c1;
+    background-color: #262626;
     }
+div4 h2, div5 h2, div6 h2{
+    text-decoration: none;
+    font-size: 23px;
+    font-family: bignoodletitling;
+    color: #fff;
+    letter-spacing: 5px;
+}
 #hed1, #hed2, #hed3{
     text-align: center;
     }

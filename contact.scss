@@ -1,0 +1,314 @@
+body{
+    /*em is relative based on font size*/ 
+    margin: 1.5em;
+    /*nice google font*/ 
+    font-family: 'Fira Sans', sans-serif;
+    color:white;
+    background-color: #212024;
+
+}
+
+footer{
+    
+    h3{
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+    height: auto;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+    span{
+        color:lightblue;
+    }
+}
+
+
+
+h1{
+    font-size: 2rem;
+    margin-top: 2em;
+    line-height: 3.3 rem;
+}
+
+a{
+    //no underlined links
+    text-decoration: none;
+    //relative
+    font-size: 1.3rem;
+}
+.top-img{
+    position: absolute;
+    top:0;
+    left: 0;
+    background: url('../tall.jpg');
+    background-size:cover;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    width:100%;
+    height:100vh;
+    z-index: -1;
+    overflow: hidden;
+    animation: loadAni 1s forwards;
+}
+
+.logo{
+    color:white;
+    font-weight:900;
+}
+
+nav{
+    position: fixed;
+    right:0;
+    top:0;
+    background: white;
+    height: 100vh;
+    width: 50%;
+    z-index: 2;
+    text-transform: uppercase;
+    //hiding menu in mobile, we will change it to 0
+    transform: translatex(100%);
+    transition: transform .5s ease-in-out;
+
+    ul {
+        //no circles
+        list-style-type: none;
+        padding:0;
+        margin-top: 8em;
+        
+        // purple=bad
+        a{
+            color: black;
+            padding: .75em 2em;
+            display: block;
+            width: 100%;
+
+            &:hover{
+                background: grey;
+            }
+
+        }
+    }
+    .close{
+        stroke: black;
+        float: right;
+        margin: 1em;
+        width: 2.5em;
+        fill: black;
+    }
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+
+    svg{
+        width: 2.5em;
+        margin-top: -.6em;
+        cursor: pointer;
+    }
+}
+
+
+section.topsection
+{
+    color: white;
+    height: 90vh;
+    animation: moveSec 1s ease-in-out forwards;
+    opacity: 0;
+
+    .arrow{
+        stroke: white;
+        position: absolute;
+        bottom: 4.5em;
+        width: 7em;
+        animation: loadArrow 1s alternate-reverse infinite;
+    }
+
+}
+.section2{
+
+    img{
+        width: 100%;
+        //makes images the same
+        object-fit: cover;
+        height: 11em;
+    }
+
+    .title{
+        font-weight: bold;
+        font-size: 1.25rem;
+    }
+
+    .desc{
+        line-height: 1.5rem;
+    }
+
+
+}
+
+// here starts responsive design for larger screens
+@media only screen and (min-width: 700px){
+
+    body{
+        margin: 1.5em 5em;
+    }
+
+}
+
+@media only screen and (min-width: 900px){
+    
+    //this icon on mobile is now not displaying
+    .menu{
+        display: none;
+    }
+
+    nav{
+        margin-left: -1.4em;
+        transform: translateX(0);
+        position: unset;
+        width: 100%;
+        height: 3.8em;
+        background-color: #212024;
+        svg.close{
+            display: none;
+        }
+        ul
+        {
+            display: flex;
+            margin: 0;
+    
+            a
+            {
+                color: white;
+                padding: .5em 1.5em;
+                font-size: .9rem;
+    
+                &:hover{
+                    background: none;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .top-img{
+        margin-top: 5.3em;
+        left: unset;
+        right: 0;
+        width: 50%;
+        height: 28em;
+    }
+
+    .logo{
+        display: none;
+    }
+
+    section.topsection{
+        color: white;
+        height: auto;
+        width: 40%;
+        margin-bottom: 8em;
+
+        .undermain{
+            margin-bottom: 3em;
+        }
+        svg.arrow {
+            stroke: black;
+            position: unset;
+
+            path{
+                fill:black;
+            }
+        }
+    }
+    .institution{
+        display: grid;
+        //parent container - repeat 2
+        grid-template-columns: repeat(2, auto);
+        //white space
+        gap: 6em;
+        margin-bottom: 8em;
+
+        img{
+            width: 30em;
+        }
+
+        .infos{
+            text-align: right;
+            width: 30em;
+        }
+        
+    }
+
+    .institution.left{
+        grid-template-areas: 
+            "left right";
+
+        img {
+            grid-area: left;
+        }
+
+        .infos{
+            text-align: left;
+            width: 25em;
+            justify-self: left ;
+
+        }
+    }
+}
+
+.open-nav{
+    transform: translateX(0%);
+}
+
+@media only screen and (min-width: 1200px){
+    .wrapper{
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+    .infos{
+        gap: 0;
+    }
+}
+
+@keyframes loadAni{
+    from
+    {
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    to{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+@keyframes loadArrow{
+    from
+    {
+        transform: translateY(-10px);
+    }
+
+    to
+    {
+        transform: translateY(0);
+    }
+}
+
+@keyframes moveSec{
+    from
+    {
+        transform: translateY(-100px);
+    }
+
+    to
+    {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

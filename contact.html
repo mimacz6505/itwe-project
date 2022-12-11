@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact information including addresses, institutions (opening hours etc.)</title>
+    <link href='https://fonts.googleapis.com/css?family=Fira Sans' rel='stylesheet'>
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+
+    <div class="top-img">
+
+    </div>
+    <!-- container -->
+    <div class="wrapper">
+        <!-- header -->
+        <header>
+            <a href="index.html" class="logo">Talinn-itwe-website</a>
+            <nav>
+                <svg class="close" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                        d="M13.46 12L19 17.54V19h-1.46L12 13.46L6.46 19H5v-1.46L10.54 12L5 6.46V5h1.46L12 10.54L17.54 5H19v1.46L13.46 12Z" />
+                </svg>
+                <ul>
+                    <li> <a href="index.html">Talinn</a></li>
+                    <li> <a href="history.html">History</a></li>
+                    <li> <a href="contact.html">Institutions</a> </li>
+                    <li> <a href="contact.html">News</a></li>
+                    <li> <a href="sightseeings.html">Sightseeings</a></li>
+                    <li> <a href="services.html">Services</a> </li>
+                </ul>
+
+
+            </nav>
+
+            <svg class="menu" fill="white" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 56 56"
+                style="enable-background:new 0 0 56 56;" xml:space="preserve">
+                <g>
+                    <path d="M28,0C12.561,0,0,12.561,0,28s12.561,28,28,28s28-12.561,28-28S43.439,0,28,0z M28,54C13.663,54,2,42.336,2,28
+		S13.663,2,28,2s26,11.664,26,26S42.337,54,28,54z" />
+                    <path d="M40,16H16c-0.553,0-1,0.448-1,1s0.447,1,1,1h24c0.553,0,1-0.448,1-1S40.553,16,40,16z" />
+                    <path d="M40,27H16c-0.553,0-1,0.448-1,1s0.447,1,1,1h24c0.553,0,1-0.448,1-1S40.553,27,40,27z" />
+                    <path d="M40,38H16c-0.553,0-1,0.448-1,1s0.447,1,1,1h24c0.553,0,1-0.448,1-1S40.553,38,40,38z" />
+
+            </svg>
+        </header>
+
+        <section class="topsection">
+            <h1>
+                Here you can find contact informations and important institutions of the capital of Estonia!
+            </h1>
+            <p class="undermain">
+                Scroll down to see photos and opening hours. This webiste is mobile-friendly!
+            </p>
+
+            <svg version="1.1" class="arrow" fill="white" ; x="0px" y="0px" viewBox="0 0 476.213 476.213"
+                style="enable-background:new 0 0 476.213 476.213;" xml:space="preserve">
+                <polygon points="287.5,384.394 253.107,418.787 253.107,0 223.107,0 223.107,418.787 188.713,384.394 167.5,405.606 
+        238.107,476.213 308.713,405.606 " />
+            </svg>
+
+
+        </section>
+
+        <section class="section2">
+            <div class="institution">
+                <div class="infos">
+                    <p class="title"> North Estonia Medical Centre </p>
+                    <p class="description">     If you need some medical help, please call <b>617 1300.</b><br> 
+                                                 Registration desk is available when you call <b>617 1369</b>.<br>
+                                                 <b>Address: </b>J. Sütiste tee 19, 13419 Tallinn.</p>
+                </div>
+                <img src="ambasada.jpg" alt="no photo1">
+            </div>
+
+            <div class="institution left">
+                <div class="infos">
+                    <p class="title"> Tallinn Tourist Information Centre </p>
+                    <p class="description">
+                            This institution can help you get free city maps, book a tour guide and buy a Talinn Card -  the city’s all-in-one sightseeing pass. <br>
+                            It's open every day: 09:00 - 18:00. <br>
+                            <b>Address:</b> Niguliste 2, 10146 Tallinn, Estonia <br>
+                            <b> Phone number: </b> 645 7777
+                        </p>
+                </div>
+                <img src="dworzec.jpg" alt="no photo2">
+            </div>
+
+            <div class="institution">
+                <div class="infos">
+                    <p class="title"> Tallinn Airport </p>
+                    <p class="description">
+                        Airport is located just 4 km from the city centre.<br>
+                        It has good public transport connection, offers sufficient access for taxies and provides plenty of options for parking your car. <br>
+                        <b>Address: </b> Tartu maantee 101, 10112 Tallinn, Estonia <br>
+                        <b> Phone number for information: </b> 605 8888
+                        
+                    </p>
+                </div>
+                <img src="uniwersytet.jpg" alt="no photo3">
+            </div>
+
+        </section>
+    </div>
+    <script>
+
+        const menu = document.querySelector('.menu')
+        const close = document.querySelector('.close')
+        const nav = document.querySelector('nav')
+
+
+        menu.addEventListener('click', () => {
+            //adding a css class when its clicked
+            // the menu in mobile is showing
+            nav.classList.add('open-nav')
+        })
+        close.addEventListener('click', () => {
+            //menu is hiding after click X and right-top
+            nav.classList.remove('open-nav')
+        })
+    </script>
+
+    <footer>
+        <div class = "footer">
+            <h3> itwe-project</h3>
+            <p> This is responsive website created for Web Design.</p>
+        </div>
+        <div class = "footer2">
+            <p>Copyright &copy;2022 Brno University of Technology. Designed by <span> xmalec08. </span></p>
+        </div>
+    </footer>
+</body>
+
+
+</html>

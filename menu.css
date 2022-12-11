@@ -1,21 +1,23 @@
 body
 {
-    text-align: center;
     margin: 0;
     padding: 0;
+    background-color:  #fcf5dc;
 }
 .wrapper{
     width: 1170px;
     margin: 0 auto;
 }
-header{
+.header{
     height: 100px;
     background: #262626;
     width: 100%;
     z-index: 12;
     position: fixed;
+    top: 0;
 }
 .logo{
+    padding-left: 10%;
     width: 30%;
     float: left;
     line-height: 100px;

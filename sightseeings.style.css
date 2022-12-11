@@ -11,6 +11,7 @@ h1{
     font-family: bignoodletitling;
     color: #262626;
     letter-spacing: 4px;
+    margin-top: 150px;
 }
 #container{
     width: 1200px;
@@ -41,6 +42,7 @@ header{
     width: 100%;
     z-index: 12;
     position: fixed;
+    top: 0;
 }
 .logo{
     width: 30%;

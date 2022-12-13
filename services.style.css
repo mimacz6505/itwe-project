@@ -92,8 +92,5 @@ div4 h2, div5 h2, div6 h2{
     color: #262626;
     padding-bottom: 10px;
     padding-top: 0;
-    box-align: justify;
-}
-p{
     text-align: justify;
 }
